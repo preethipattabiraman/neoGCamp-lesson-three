@@ -9,6 +9,9 @@ body {
     font-family: 'Roboto Mono', monospace;
 }
 
+hr {
+    margin: 1.5rem 0rem;
+}
 /** Containers **/
 
 .clib-container {
@@ -39,3 +42,8 @@ body {
     border-radius: 0.5rem;
     border: 1px solid var(--primary-color);
 }
+
+/** Read about BEM naming convention**/
+
+/** Lists **/
+
