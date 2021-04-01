@@ -26,6 +26,10 @@ hr {
     margin: auto
 }
 
+.clib-container-inline {
+    float: left;
+}
+
 
 /** Links **/
 
