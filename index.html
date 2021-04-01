@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Component Library</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
@@ -29,7 +30,8 @@
     <div class="clib-container-fluid">This is a fluid container. This will grow till the end of the page.</div>
 
     <h3>Center Container</h3>
-    <div class="clib-container clib-container-center">This is a center container. This will grow till the end of the specified width.</div>
+    <div class="clib-container clib-container-center">This is a center container. This will grow till the end of the
+        specified width.</div>
 
     <hr>
 
@@ -86,34 +88,40 @@
 
     <h2>@header</h2>
 
-    <header>
-        <img src="/images/hero.svg" />
-        <h1>Heading inside Hero</h1>
+    <header class="clib-header">
+        <img class="clib-header-image" src="/images/hero.svg" />
+        <h1 class="clib-header-heading">Heading inside Hero; A bigger One; Does text wrap?</h1>
     </header>
 
     <hr>
 
     <h2>@section</h2>
 
-    <section>
-        <h3>white section</h3>
-        <p>This will have white background.</p>
+    <section class="clib-section">
+        <div class="clib-container-center">
+            <h1>white section</h1>
+            <p>GitHub is built for collaboration. Set up an organization to improve the way your team works together,
+                and get access to more features.</p>
+        </div>
     </section>
 
-    <section>
-        <h3>off-white section</h3>
-        <p>This will have grey background.</p>
+    <section class="clib-section clib-section-ow">
+        <div class="clib-container-center">
+            <h1>off-white section</h1>
+            <p>Zoho Creator is a low-code application development platform that allows users to create custom
+                applications on their own, with minimal coding experience. </p>
+        </div>
     </section>
 
     <hr>
 
     <h2>@footer</h2>
-    <footer>
-        <div>Some small heading inside footer</div>
-        <ul>
-            <li>Social Media One</li>
-            <li>Social Media Two</li>
-            <li>Social Media Three</li>
+    <footer class="clib-footer">
+        <div class="clib-header">Some small heading inside footer</div>
+        <ul class="clib-social-media clib-list-inline">
+            <li><a class="clib-footer-link" href="/">Social Media One</a></li>
+            <li><a class="clib-footer-link" href="/">Social Media Two</a></li>
+            <li><a class="clib-footer-link" href="/">Social Media Three</a></li>
         </ul>
     </footer>
 </body>

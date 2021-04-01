@@ -2,7 +2,8 @@
 
 :root {
     --primary-color: #010108;
-
+    --header-color: #6B7280;
+    --section-color: #F3F4F6;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
 hr {
     margin: 1.5rem 0rem;
 }
+
 /** Containers **/
 
 .clib-container {
@@ -47,15 +49,13 @@ hr {
 
 /** Lists **/
 
-.clib-list {
-
-}
+.clib-list {}
 
 .clib-list-non-bullet {
     list-style: none;
 }
 
-.clib-list-inline > li {
+.clib-list-inline>li {
     display: inline;
     padding: 0rem 0.5rem;
 }
@@ -73,6 +73,7 @@ hr {
     font-weight: bold;
     font-size: 1.1rem;
 }
+
 .clib-nav ul {
     text-align: right;
 }
@@ -82,9 +83,53 @@ hr {
     text-decoration: none;
 }
 
-.clib-nav .clib-nav-link-active{
+.clib-nav .clib-nav-link-active {
     font-weight: bold;
     text-decoration: underline;
 }
 
 /** Header **/
+
+.clib-header {
+    padding: 2rem;
+    text-align: center;
+}
+
+.clib-header-image {
+    display: block;
+    margin: auto;
+    max-width: 350px;
+}
+
+.clib-header-heading {
+    font-size: 2.5rem;
+    color: var(--header-color);
+    word-wrap: normal;
+}
+
+/** Sections **/
+
+.clib-section {
+    padding: 2rem;
+}
+
+.clib-section h1 {
+    text-align: center;
+}
+
+.clib-section-ow {
+    background-color: var(--section-color);
+}
+
+/** Footer **/
+.clib-footer {
+    background-color: var(--primary-color);
+    padding: 2rem;
+    text-align: center;
+    color: white;
+    border-top-right-radius: 1rem;
+}
+
+.clib-footer .clib-footer-link {
+    color: white;
+}
