@@ -4,73 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Component Library</title>
+    <title>Home | Preethi Pattabiraman</title>
+
+    <link rel="icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="styles.css" />
+
+    <!-- for github button-->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- for linkedin button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
-    <h1>Custom Component library</h1>
-    <p>Components have always fascinated us. Bootstrap, Machine.io are some examples. Let's create one on our own.</p>
-
-    <hr>
-
-    <h2>@typography</h2>
-
-    <h1>The biggest heading.</h1>
-    <h2>The second biggest heading.</h2>
-    <p>Normal text looks like this. This is a small paragraph.</p>
-    <p>This paragraph will have a <strong>bold</strong> text.</p>
-    <small>This is relatively smaller text.</small>
-
-    <hr>
-
-    <h2>@containers</h2>
-
-    <h3>Fluid Container</h3>
-    <div class="clib-container-fluid">This is a fluid container. This will grow till the end of the page.</div>
-
-    <h3>Center Container</h3>
-    <div class="clib-container clib-container-center">This is a center container. This will grow till the end of the
-        specified width.</div>
-
-    <hr>
-
-    <h2>@links</h2>
-
-    <a class="clib-link clib-link-primary" href="/">Primary Link</a>
-    <a class="clib-link clib-link-secondary" href="/">Secondary Link</a>
-
-    <hr>
-
-    <h2>@lists</h2>
-
-    <b>Unordered lists</b>
-    <ul class="clib-list-non-bullet">
-        <li>Item One</li>
-        <li>Item Two</li>
-        <li>Item Three</li>
-    </ul>
-
-    <b>Unordered Inline lists</b>
-    <ul class="clib-list-non-bullet clib-list-inline">
-        <li>Inline Item One</li>
-        <li>Inline Item Two</li>
-        <li>Inline Item Three</li>
-    </ul>
-
-    <b>Reverse Order lists</b>
-    <ol reversed>
-        <li>Reverse Item One</li>
-        <li>Reverse Item Two</li>
-        <li>Reverse Item Three</li>
-    </ol>
-
-    <hr>
-
-    <h2>@nav</h2>
-
     <nav class="clib-nav clib-container">
-        <div class="clib-nav-logo">brandLogo</div>
+        <div class="clib-nav-logo">Preethi Pattabiraman</div>
         <ul class="clib-list-non-bullet clib-list-inline">
             <li>
                 <a class="clib-nav-link clib-nav-link-active" href="/">Home</a>
@@ -81,47 +30,55 @@
             <li>
                 <a class="clib-nav-link" href="/">About</a>
             </li>
+            <li>
+                <a class="clib-nav-link" href="/">Blogs</a>
+            </li>
         </ul>
     </nav>
 
-    <hr>
-
-    <h2>@header</h2>
-
     <header class="clib-header">
         <img class="clib-header-image" src="/images/hero.svg" />
-        <h1 class="clib-header-heading">Heading inside Hero; A bigger One; Does text wrap?</h1>
+        <h1 class="clib-header-heading"> Coder | Web Developer | Writer | Mother </h1>
     </header>
 
-    <hr>
-
-    <h2>@section</h2>
+    <section class="clib-section clib-section-ow">
+        <div class="clib-container-center">
+            <h1>What do I do</h1>
+            <p>Full-stack Development using Java, HTML5, CSS3, JavaScript, jQuery, MySQL. Love to write. An avid reader.
+            </p>
+        </div>
+    </section>
 
     <section class="clib-section">
         <div class="clib-container-center">
-            <h1>white section</h1>
-            <p>GitHub is built for collaboration. Set up an organization to improve the way your team works together,
-                and get access to more features.</p>
+            <h1>Projects</h1>
+            <p>Doing is learning. Check out some of my <a class="clib-link" href="/">works</a>>>.</p>
         </div>
     </section>
 
     <section class="clib-section clib-section-ow">
         <div class="clib-container-center">
-            <h1>off-white section</h1>
-            <p>Zoho Creator is a low-code application development platform that allows users to create custom
-                applications on their own, with minimal coding experience. </p>
+            <h1>Blogs</h1>
+            <p>Writing has always driven me. Check out my writings <a class="clib-link">here</a>>>.</p>
         </div>
     </section>
 
-    <hr>
-
-    <h2>@footer</h2>
     <footer class="clib-footer">
-        <div class="clib-header">Some small heading inside footer</div>
+        <div class="clib-footer-header">Connect with me</div>
         <ul class="clib-social-media clib-list-inline">
-            <li><a class="clib-footer-link" href="/">Social Media One</a></li>
-            <li><a class="clib-footer-link" href="/">Social Media Two</a></li>
-            <li><a class="clib-footer-link" href="/">Social Media Three</a></li>
+            <li><a href="https://twitter.com/PPattabiraman?ref_src=twsrc%5Etfw" class="twitter-follow-button"
+                    data-show-count="false">Follow @PPattabiraman</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
+            <li>
+                <a class="clib-link" href="https://www.linkedin.com/in/preethi-pattabiraman-77403732/"><i class="fa fa-linkedin-square"></i>
+                </a>
+            </li>
+            <li>
+                <a class="github-button" href="https://github.com/preethipattabiraman"
+                    aria-label="Follow @preethipattabiraman on GitHub">Follow @preethipattabiraman</a>
+            </li>
+            
         </ul>
     </footer>
 </body>
