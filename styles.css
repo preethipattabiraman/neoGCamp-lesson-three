@@ -47,3 +47,22 @@ hr {
 
 /** Lists **/
 
+.clib-list {
+
+}
+
+.clib-list-non-bullet {
+    list-style: none;
+}
+
+.clib-list-inline > li {
+    display: inline;
+    padding: 0rem 0.5rem;
+}
+
+/** Navigation **/
+
+.clib-nav {
+    background-color: var(--primary-color);
+    color: white;
+}
