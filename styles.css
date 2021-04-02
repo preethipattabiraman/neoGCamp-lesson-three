@@ -143,6 +143,29 @@ hr {
     text-decoration: underline;
 }
 
+/** Article **/
+.clib-article {
+    padding: 2rem;
+    background-color: var(--section-color);
+    text-align: center;
+}
+
+.clib-article .clib-article-heading {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+}
+
+.clib-article .clib-article-image {
+    width: 300px;
+}
+
+.clib-article .clib-article-content {
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 0rem 6rem;
+}
+
 /** Footer **/
 .clib-footer {
     background-color: var(--primary-color);
