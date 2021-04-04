@@ -167,6 +167,11 @@ hr {
     padding: 0rem 6rem;
 }
 
+.clib-article .clib-article-highlight {
+    background-color: var(--header-color);
+    color: white;
+}
+
 /** Footer **/
 .clib-footer {
     background-color: var(--primary-color);
@@ -183,4 +188,13 @@ hr {
 
 .clib-footer .clib-footer-link {
     color: white;
+}
+
+/** Align Center **/
+.clib-center {
+    text-align: center !important;
+}
+
+.clib-bold {
+    font-weight: bold;
 }

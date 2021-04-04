@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | CSS Selectors | Preethi Pattabiraman</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- for github button-->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- for linkedin button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="clib-nav clib-container">
+        <div class="clib-nav-logo">Preethi Pattabiraman</div>
+        <ul class="clib-list-non-bullet clib-list-inline">
+            <li>
+                <a class="clib-nav-link" href="/">Home</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/projects.html">Projects</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/about.html">About</a>
+            </li>
+            <li>
+                <a class="clib-nav-link  clib-nav-link-active" href="/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <article class="clib-article">
+        <span class="clib-article-heading">Which one to select?</span>
+        <section class="clib-article-section">
+            <h3>CSS Selectors</h3>
+            <img class="clib-article-image" src="/images/CSSSelectors.png" />
+            <p class="clib-article-content">Selecting DOM elements is the most obvious thing to do in web development.
+                The neat way to do so too. Not all interactions with a web page can be realised with alerts and prompts.
+                The neat way is to make the user completely interact with the webpage. CSS selectors help in this.
+            </p>
+            <p class="clib-article-content clib-article-highlight">Those identifiers with which particular style is
+                applied to a particular DOM element are CSS selectors. CSS selectors identify a set of elements to which
+                a set of CSS rules apply.</p>
+            <p class="clib-article-content clib-center">See this <a href="https://codepen.io/preethi-pattabiraman/pen/zYNwEwe"
+                    class="clib-nav-link">codepen</a> for reference.</p>
+            <p class="clib-article-content">There are four basic categories of selectors: Basic, Grouping, Combinators,
+                Pseudo.
+            </p>
+            <p class="clib-article-content">The most efficient CSS selector is an ID selector. Since only one element has a unique ID, it has the highest matching quotient (HMQ) in the DOM. 
+            </p>
+            <p class="clib-article-content">Classes allow grouping of similar DOM elements. It has the second HMQ in DOM. 
+            </p>
+            <p class="clib-article-content">Types help in selecting similar tags in DOM. Selecting all elements under a given tagname in a DOM can be done via this.
+            </p>
+            <p class="clib-article-content">Attribute selectors help in identifying those tags with the specified attribute value in the DOM.
+            </p>
+            <p class="clib-article-content">Universal selector, <span class="clib-bold">(*)</span>, selects all the elements in the DOM.
+            </p>
+            <img class="clib-article-image" src="/images/codepen-css.png" />
+            <p class="clib-article-content">From the above example, it is obvious that the ID selector style has more priority than the rest. Also, note that the styles in the bottom of the stylesheet overrides the styles in the above. (See the elements having a pointer as their cursor.) Of course, it depends on the hierarchy and the HQM of the element.
+            </p>
+            <p class="clib-article-content">List selectors are used to select all the matching nodes.
+            </p>
+            <p class="clib-article-content">In the above example, the ID and anchor tag matching elements are selected and styles are applied.
+            </p>
+            <p class="clib-article-content">Descendants can be selected by giving a space between the parent and the descendant. Only those nodes get affected by the styles.
+            </p>
+            <p class="clib-article-content">Children can be selected by the greater than symbol <span class="clib-bold">(>)</span>. Using this, direct children can be targeted.
+            </p>
+            <p class="clib-article-content">The general sibling combinator <span class="clib-bold">(~)</span> selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
+            </p>
+            <p class="clib-article-content">The adjacent sibling combinator <span class="clib-bold">(+)</span> selects adjacent siblings. This means that the second element directly follows the first, and both share the same parent.
+            </p>
+            <p class="clib-article-content">The column combinator <span class="clib-bold">(||)</span> selects nodes which belong to a column.
+            </p>
+            <p class="clib-article-content">Pseudo classes are mainly based on the state of the DOM nodes. The anchor tag has multiple states : new link, visited, clicked, currently being visited etc. These can be represented as pseudo classes <span class="clib-bold">(:)</span>. Active, focus, hover are some of the most commonly used pseudo classes.
+            </p>
+            <p class="clib-article-content clib-center"><strong>ID > Class > element > attribute > Universal<br>Inline Style > Style tag > Separate stylesheet</strong>>
+            </p>
+        </section>
+    </article>
+
+    <footer class="clib-footer">
+        <div class="clib-footer-header">Connect with me</div>
+        <ul class="clib-social-media clib-list-inline">
+            <li><a target="_blank" href="https://twitter.com/PPattabiraman?ref_src=twsrc%5Etfw"
+                    class="twitter-follow-button" data-show-count="false">Follow @PPattabiraman</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
+            <li>
+                <a target="_blank" class="clib-link"
+                    href="https://www.linkedin.com/in/preethi-pattabiraman-77403732/"><i
+                        class="fa fa-linkedin-square"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" class="github-button" href="https://github.com/preethipattabiraman"
+                    aria-label="Follow @preethipattabiraman on GitHub">Follow @preethipattabiraman</a>
+            </li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>
