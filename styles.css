@@ -198,3 +198,29 @@ hr {
 .clib-bold {
     font-weight: bold;
 }
+
+/** Card Layout **/
+.clib-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    gap: 0.5rem;
+}
+
+.clib-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+}
+
+.clib-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.clib-card .clib-container-card {
+    padding: 1rem;
+}
