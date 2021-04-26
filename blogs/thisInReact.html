@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | this in React | Preethi Pattabiraman</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- for github button-->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- for linkedin button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="clib-nav clib-container">
+        <div class="clib-nav-logo">Preethi Pattabiraman</div>
+        <ul class="clib-list-non-bullet clib-list-inline">
+            <li>
+                <a class="clib-nav-link" href="/">Home</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/projects.html">Projects</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/about.html">About</a>
+            </li>
+            <li>
+                <a class="clib-nav-link  clib-nav-link-active" href="/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <article class="clib-article">
+        <span class="clib-article-heading">this in React</span>
+        <section class="clib-article-section">
+            <h3>Usage of this in React - Decoded</h3>
+            <img class="clib-article-image" src="/images/this.jpg" />
+            <p class="clib-article-content">I am currently trying out small examples in react, when I came across many statements that explicitly re-declared the methods inside the Class Component as below:
+            </p>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+    constructor(props) {
+        super(props);
+        ...
+        this.handleClick = this.handleClick.bind(this);
+    }
+                    </code>
+                </pre>
+            </div>
+
+           
+            <p class="clib-article-content">I wondered why. There are some rules when it comes to this binding in JavaScript.</p>
+            <ol class="clib-align-left">
+                <li>When a function is called in <strong>global</strong> scope, this refers to the <strong>global</strong> scope.</li>
+                <li>When a function is called <strong>within a context object</strong>, the this reference will be bound to this object.</li>
+                <li>When methods like <strong>.call(), .apply(), .bind() </strong> are used, this is bound to that object passed.</li>
+                <li>Sometimes, this points to dynamic context depending on where, how and why the function is called. For example, when <strong>setTimeout</strong> or <strong>setInterval</strong> methods are used, they will clear out the contexts in the specified intervals of time. Hence, we should save the this to reuse them.</li>
+                <li>When <strong>new</strong> is used to instantiate a new object like below, this points to that newly created object.</li>
+            </ol>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+    function Rectangle(l,b) {
+        this.l = l;
+        this.b = b;
+    }
+        
+    Rectangle rect = new Rectangle(10,4);
+                    </code>
+                </pre>
+            </div>
+            <p class="clib-article-content">That said, Arrow functions are completely different in the fact that they take the lexical this to perform the function. They take the scope of the enclosing object that calls this function.
+            </p>
+            <p class="clib-article-content clib-center clib-article-highlight"><strong>this</strong> in arrow function always refers to the <strong>enclosing this</strong>
+            </p>
+            <p class="clib-article-content">How <strong>this</strong> can be handled in React?
+            </p>
+            <p class="clib-article-content">1. Binding in the constructor:
+            </p>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+    constructor(props) {
+        super(props);
+        ...
+        this.handleClick = this.handleClick.bind(this);
+    }
+        
+    handleClick() { }
+        
+    render() => {
+        &lt;button onClick={this.handleClick}&gt;Click!&lt;/button&gt;
+    }
+                    </code>
+                </pre>
+            </div>
+
+            <p class="clib-article-content">2. Using Arrow functions:
+            </p>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+    render() => {
+        &lt;button onClick={this.handleClick}&gt;Click!&lt;/button&gt;
+        }
+        
+    handleClick = () => { }
+                    </code>
+                </pre>
+            </div>
+
+            <p class="clib-article-content">3. Binding during the rendering:
+            </p>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+    constructor(props) {
+        super(props);
+        ...
+    }
+        
+    render() => {
+        &lt;button onClick={this.handleClick.bind(this)}&gt;Click!&lt;/button&gt;
+    }
+        
+    handleClick = () => { }
+                    </code>
+                </pre>
+            </div>
+            
+
+        </section>
+    </article>
+
+    <footer class="clib-footer">
+        <div class="clib-footer-header">Connect with me</div>
+        <ul class="clib-social-media clib-list-inline">
+            <li><a target="_blank" href="https://twitter.com/PPattabiraman?ref_src=twsrc%5Etfw"
+                    class="twitter-follow-button" data-show-count="false">Follow @PPattabiraman</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
+            <li>
+                <a target="_blank" class="clib-link"
+                    href="https://www.linkedin.com/in/preethi-pattabiraman-77403732/"><i
+                        class="fa fa-linkedin-square"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" class="github-button" href="https://github.com/preethipattabiraman"
+                    aria-label="Follow @preethipattabiraman on GitHub">Follow @preethipattabiraman</a>
+            </li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>

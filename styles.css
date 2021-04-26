@@ -225,12 +225,17 @@ hr {
     padding: 1rem;
 }
 
+.clib-code-container {
+    margin-left: 10rem;
+}
+
 .clib-code-block {
     color: var(--primary-color);
-    font-size: 0.83333rem;
+    font-size: 1rem;
     padding: 16px;
     border: 1px solid var(--primary-color);
-    height: fit-content;
+    text-align: left;
+    margin: 0;
     width: fit-content;
 }
 
@@ -240,4 +245,10 @@ hr {
     overflow-wrap: break-word;
     font-family: monospace, monospace;
     font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.clib-align-left {
+    text-align: left;
 }
