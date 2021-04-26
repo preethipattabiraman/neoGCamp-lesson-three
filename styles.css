@@ -224,3 +224,20 @@ hr {
 .clib-card .clib-container-card {
     padding: 1rem;
 }
+
+.clib-code-block {
+    color: var(--primary-color);
+    font-size: 0.83333rem;
+    padding: 16px;
+    border: 1px solid var(--primary-color);
+    height: fit-content;
+    width: fit-content;
+}
+
+.clib-code {
+    display: block;
+    white-space: pre-wrap;
+    overflow-wrap: break-word;
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
