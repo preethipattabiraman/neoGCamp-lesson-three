@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Add Class to &lt;body&gt; in React | Preethi Pattabiraman</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- for github button-->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- for linkedin button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="clib-nav clib-container">
+        <div class="clib-nav-logo">Preethi Pattabiraman</div>
+        <ul class="clib-list-non-bullet clib-list-inline">
+            <li>
+                <a class="clib-nav-link" href="/">Home</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/projects.html">Projects</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/about.html">About</a>
+            </li>
+            <li>
+                <a class="clib-nav-link  clib-nav-link-active" href="/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <article class="clib-article">
+        <span class="clib-article-heading">Add a class to &lt;body&gt; tag in React</span>
+        <section class="clib-article-section">
+            <h3>Adding styles and other attributes to the &lt;body&gt; tag in React.</h3>
+            <img class="clib-article-image" src="/images/Html-Classes-df.jpg" />
+            <p class="clib-article-content">I am currently trying out small examples in react, when I wanted to add a class to the body of the React app. Adding a class to the document is not straight-forward in React apps. We need to do it in a different way, since &lt;body&gt; lies outside the ‘body’ of a React app.
+            </p>
+            <p class="clib-article-content">
+                Consider enabling dark mode of the application. We need to add a class to the &lt;body&gt;. Let us see how to do that:
+            </p>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+    .dark-mode {
+        color: white;
+        background-color: black;
+    }
+                    </code>
+                </pre>
+            </div>
+
+           
+            <p class="clib-article-content">We are adding the required properties for the dark mode in the CSS file.</p>
+            <p class="clib-article-content">Let us add a basic checkbox which will enable the dark mode when the checkbox is enabled and vice versa when disabled. We will add the class to the &lt;body&gt; when the checkbox is enabled. 
+            </p>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+    render() {
+        return (
+            &lt;div className="App"&gt;
+            &lt;input
+                type="checkbox"
+                defaultValue={this.state.isDarkMode}
+                onChange={this.setDarkMode}
+            /&gt;
+            Set dark mode.
+            &lt;/div&gt;
+        );
+    }
+    
+    setDarkMode = (e) => {
+        this.setState({
+            isDarkMode: e.target.checked
+        });
+        if (e.target.checked) {
+            document.body.classList.add("dark-mode");
+        } else {
+            document.body.classList.remove("dark-mode");
+        }
+    };
+                    </code>
+                </pre>
+            </div>
+            <p class="clib-article-content">
+                Normally, the page would like the below: <br/><br/>
+                <img class="clib-article-image" src="/images/normalMode.png" />
+            </p>
+            <p class="clib-article-content">
+                When the checkbox is checked, the dark mode will be enabled as below: <br/><br/>
+                <img class="clib-article-image" src="/images/darkMode.png" />
+            </p>
+            <p class="clib-article-content clib-center">Thus, we are manipulating the classList of the &lt;body&gt; tag. The same way we can add other attributes and styles.
+            </p>
+
+            <p class="clib-article-content">
+                <div class="clib-code-container">
+                    <pre class="clib-code-block">
+                        <code class="clib-code">
+    document.body.classList.add("dark-mode");
+    document.body.style.fontSize = "2rem";
+    document.body.style.overflow = "hidden";
+    document.body.&lt;userDefinedAttribute&gt; = value;
+                        </code>
+                    </pre>
+                </div> 
+            </p>
+            <p class="clib-article-content clib-center clib-article-highlight">Although this is easy to do, it is not a correct method. Always have a &lt;div&gt; inside the document's body and handle the top-level changes using that.
+                <div class="clib-code-container">
+                    <pre class="clib-code-block">
+                        <code class="clib-code">
+    &lt;html&gt;
+        &lt;head&gt;
+            &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;div id="root"&gt;
+                        &lt;!-- Root Component --&gt;
+                    &lt;/div&gt;
+                &lt;/body&gt;
+    &lt;/html&gt;
+                        </code>
+                    </pre>
+                </div> 
+            </p>
+            
+        </section>
+    </article>
+
+    <footer class="clib-footer">
+        <div class="clib-footer-header">Connect with me</div>
+        <ul class="clib-social-media clib-list-inline">
+            <li><a target="_blank" href="https://twitter.com/PPattabiraman?ref_src=twsrc%5Etfw"
+                    class="twitter-follow-button" data-show-count="false">Follow @PPattabiraman</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
+            <li>
+                <a target="_blank" class="clib-link"
+                    href="https://www.linkedin.com/in/preethi-pattabiraman-77403732/"><i
+                        class="fa fa-linkedin-square"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" class="github-button" href="https://github.com/preethipattabiraman"
+                    aria-label="Follow @preethipattabiraman on GitHub">Follow @preethipattabiraman</a>
+            </li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>
