@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | Set Height to body in React | Preethi Pattabiraman</title>
+    <link rel="icon" href="../images/favicon.ico" />
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- for github button-->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- for linkedin button-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <nav class="clib-nav clib-container">
+        <div class="clib-nav-logo">Preethi Pattabiraman</div>
+        <ul class="clib-list-non-bullet clib-list-inline">
+            <li>
+                <a class="clib-nav-link" href="/">Home</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/projects.html">Projects</a>
+            </li>
+            <li>
+                <a class="clib-nav-link" href="/about.html">About</a>
+            </li>
+            <li>
+                <a class="clib-nav-link  clib-nav-link-active" href="/blogs.html">Blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <article class="clib-article">
+        <span class="clib-article-heading">Set height to body in React</span>
+        <section class="clib-article-section">
+            <h3>Manipulate body from the React's <b>root</b> element</h3>
+            <img class="clib-article-image" src="/images/Html-Classes-df.jpg" />
+            <p class="clib-article-content">I am currently trying out small examples in React. I wanted to learn on how to access the body of the React app, without actually accessing the &lt;body&gt; element. All React apps have a default &lt;div&gt; with the ID <b>root</b>. This is the actual body element of the React app. Hence, the styles applied to the <b>root</b> should get applied on the &lt;body&gt; too. Let us see how to do it.
+            </p>
+            <p class="clib-article-content">
+                Consider enabling dark mode of the application. We need to ensure that the class when added to the <b>root</b> div element the dark mode is enabled to the entire body. To achive this, we set the height of the body and then the div element in CSS as follows:
+            </p>
+            <div class="clib-code-container">
+                <pre class="clib-code-block">
+                    <code class="clib-code">
+     html,
+     body {
+        margin: 0;
+        height: 100%;
+    }
+
+    #root {
+        height: 100%;
+    }
+
+    .dark-mode {
+        color: white;
+        background-color: black;
+    }
+                    </code>
+                </pre>
+            </div>
+
+           
+            <p class="clib-article-content">This will ensure the height of the div <b>root</b> element is same as the &lt;body&gt; element.</p>
+            <p class="clib-article-content">Check out this example in <a target="_blank" href="https://3imzm.csb.app/">this</a> link.</p>
+                        
+        </section>
+    </article>
+
+    <footer class="clib-footer">
+        <div class="clib-footer-header">Connect with me</div>
+        <ul class="clib-social-media clib-list-inline">
+            <li><a target="_blank" href="https://twitter.com/PPattabiraman?ref_src=twsrc%5Etfw"
+                    class="twitter-follow-button" data-show-count="false">Follow @PPattabiraman</a>
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </li>
+            <li>
+                <a target="_blank" class="clib-link"
+                    href="https://www.linkedin.com/in/preethi-pattabiraman-77403732/"><i
+                        class="fa fa-linkedin-square"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" class="github-button" href="https://github.com/preethipattabiraman"
+                    aria-label="Follow @preethipattabiraman on GitHub">Follow @preethipattabiraman</a>
+            </li>
+
+        </ul>
+    </footer>
+</body>
+
+</html>
